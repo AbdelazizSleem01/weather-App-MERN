@@ -13,7 +13,7 @@ function App() {
     const fetchWeather = async () => {
         try {
             setButtonColor('green');
-            const response = await axios.get(`http://localhost:8080/weather/${city}`);
+            const response = await axios.get(`https://weather-app-mern.onrender.com/weather/${city}`);
             const weatherInfo = response.data.result;
             setWeatherData(weatherInfo);
             setError('');
