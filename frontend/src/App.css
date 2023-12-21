@@ -1,0 +1,116 @@
+
+body{
+
+    background-color: #000000a7
+}
+.App {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-shadow: 1px 2px 3px black;
+    font-weight: 700;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.weather-data {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Box shadow for a card-like effect */
+}
+
+.weather-data p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Style each piece of weather data separately */
+.weather-data p:nth-child(odd) {
+    color: #007bff;
+    /* Blue color for weather condition and wind */
+}
+
+.results{
+    width: 60%;
+    margin-top: 50px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #007bff;
+
+    & .name{
+        margin-right: 500px;
+        margin: 15px;
+        box-shadow: 1px 2px 3px 3px black;
+        background-image: linear-gradient(rgb(231, 231, 231) , rgb(190, 190, 190));
+        padding-top: 15px;
+        border-radius: 25px;
+        height: 130px;
+        
+        & h1{
+            display: inline-block;
+        }
+        & img{
+            width: 100px;
+            height: 100px;
+            margin-top: -22px;
+        }
+    }
+    & .row{
+        & p{
+            text-align: center;
+            box-shadow: 1px 2px 3px 1px rgb(0, 0, 0);
+            border-radius: 25px;
+            padding: 15px;
+            margin: 15px;
+            background-image: linear-gradient(rgb(231, 231, 231) , rgb(190, 190, 190));
+
+        }
+        & .single_result{
+            display: block;
+            & span{
+                font-size: 38px;
+                color: orangered;
+            }
+        }
+        & .blue{
+            color: rgb(0, 106, 255);
+            font-size: 38px;
+        }
+        & .red{
+            color: rgb(142, 0, 0);
+            font-size: 38px;
+        }
+    }
+}
