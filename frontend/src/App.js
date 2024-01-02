@@ -15,7 +15,11 @@ function App() {
             setButtonColor('green');
             const response = await axios.get(`http://localhost:8080/weather/${city}`);
             const weatherInfo = response.data.result;
-            setWeatherData(weatherInfo);
+            //settime out
+            setTimeout(() => {
+                setWeatherData(weatherInfo)
+
+            }, 2000)
             setError('');
 
             setTimeout(() => {
@@ -54,7 +58,7 @@ function App() {
                     <div className='row'>
                         <div className='col-md-6'>
                             <p className='single_result'>
-                                <h5 className=''>Temperature : {(weatherData.main.temp - 273).toFixed(0)}°C</h5>                                
+                                <h5 className=''>Temperature : {(weatherData.main.temp - 273).toFixed(0)}°C</h5>
                                 <span class="material-symbols-outlined ">
                                     thermostat
                                 </span>
@@ -107,7 +111,7 @@ function App() {
                     </div>
                 </div>
             ) : (
-                <p className='text-center mt-4'>Loading weather data...</p>
+                <div className="loader " style={{textAlign:"center",marginInline:"auto", marginTop:"55px"}} ></div>
             )}
             <ToastContainer />
         </div>
